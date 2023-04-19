@@ -9,9 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 console.log(process.env.REACT_APP_DOMAIN)
 root.render(
   <React.StrictMode>
-    <Auth0Provider domain='dev-h4dgk2znphqtnk1s.us.auth0.com' clientId='qoepW13zlh2nyZrIpyTmDvbLnqg9JG5H' authorizationParams={{
-      redirect_uri: window.location.origin
-    }}>
+    <Auth0Provider domain='dev-h4dgk2znphqtnk1s.us.auth0.com' clientId='qoepW13zlh2nyZrIpyTmDvbLnqg9JG5H' redirectUri={window.location.origin}>
       <GithubProvider>
       <App />
       </GithubProvider>
